@@ -1,5 +1,8 @@
-const About = () => (
+const About = () => {
+	console.log("About");
+	return(
 	<main role="main">
+
 		<div>
 			<h1>About</h1>
 			<p>
@@ -9,6 +12,7 @@ const About = () => (
 			<a href="https://github.com/textbook/starter-kit/wiki">Wiki</a>
 		</div>
 	</main>
-);
+	);
+};
 
 export default About;
