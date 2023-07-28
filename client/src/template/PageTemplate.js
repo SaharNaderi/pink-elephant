@@ -1,14 +1,35 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
-const PageTemplate = ({ children }) => {
-    return (
-			<div>
-				<header>{/*header content goes here*/}</header>
-				<main style={{ flex: 1 }}>
-					{children}
+
+const Template = () => {
+	return (
+		<>
+			<body>
+				<article>
+					<header>
+						<div className="head-container">
+							<div className="logo">
+								<img className="logo-icon" src="logo.svg" alt="logo" />
+								<p className="slogan">WeLinked</p>
+							</div>
+							<div className="head-button">
+								<Link to="#h">Hire Me</Link>
+								<Link to="#h">Guidance</Link>
+								<Link to="#h">News</Link>
+								<Link to="#h">Users</Link>
+							</div>
+						</div>
+					</header>
+					<main>
+						<Outlet />
 					</main>
-				<footer>{/* footer content goes here*/}</footer>
-			</div>
-		);
+					<footer></footer>
+				</article>
+			</body>
+		</>
+	);
+
 };
-export default PageTemplate;
+
+export default Template;
