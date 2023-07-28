@@ -1,35 +1,23 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
-const Template = () => {
+
+const PageTemplate = () => {
 	return (
-		<>
-			<body>
-				<article>
-					<header>
-						<div className="head-container">
-							<div className="logo">
-								<img className="logo-icon" src="logo.svg" alt="logo" />
-								<p className="slogan">WeLinked</p>
-							</div>
-							<div className="head-button">
-								<Link to="#h">Hire Me</Link>
-								<Link to="#h">Guidance</Link>
-								<Link to="#h">News</Link>
-								<Link to="#h">Users</Link>
-							</div>
-						</div>
-					</header>
-					<main>
-						<Outlet />
-					</main>
-					<footer></footer>
-				</article>
-			</body>
-		</>
+		<article className="template-body">
+			<Header></Header>
+
+			<main>
+				<Outlet></Outlet>
+			</main>
+
+			<Footer></Footer>
+		</article>
 	);
 
 };
 
-export default Template;
+export default PageTemplate;

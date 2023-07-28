@@ -6,5 +6,6 @@ import App from "./App";
 createRoot(document.getElementById("root")).render(
 	<BrowserRouter>
 		<App />
+
 	</BrowserRouter>
 );
