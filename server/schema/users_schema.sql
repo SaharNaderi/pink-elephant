@@ -19,4 +19,9 @@ CREATE TABLE users (
 );
 
 
+INSERT INTO users (first_name, last_name, age, role, nationality, location, soft_skills, hard_skills, mobile, email, linkedin, youtube, description, hobbies)
+VALUES
+  ('Mash', 'Ali', 28, 'Tech Lead', 'UK', 'London', 'Communication', 'React', '123456789', 'ali@example.com', 'mash.ali', 'Not specified', 'A software developer', 'Gym, Music'),
+  ('Beautiful', 'Paria', 120, 'unemployed', 'UK', 'LDN', 'Creativity', 'SQL', '987654321', 'lili@example.com', 'lili.Far', 'Not specified', 'looking for job', 'Music, Photography');
+
 
