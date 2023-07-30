@@ -18,6 +18,7 @@ export function Home() {
 			.then((body) => {
 				setMessage(body.message);
 			})
+			
 			.catch((err) => {
 				console.error(err);
 			});
