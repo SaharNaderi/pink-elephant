@@ -1,0 +1,21 @@
+.success {
+  border: 2px solid green;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.required-input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.required-input p {
+  color: red;
+  font-size: 12px;
+}
+
