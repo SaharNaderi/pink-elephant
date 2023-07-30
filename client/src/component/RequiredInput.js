@@ -24,6 +24,7 @@ function RequiredInput({ type, placeholder }) {
 				age: "",
 				error: "Invalid data",
 			});
+
 		}
 	};
 
