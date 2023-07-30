@@ -1,0 +1,89 @@
+@import "./colors.css";
+.Header-contaner {
+  display: flex;
+  align-items: center;
+  gap: 190px;
+
+  
+  
+}
+.Header-logo {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-logo-icon {
+  width: 97px;
+  height: 103px;
+}
+.Header-logo-text {
+  font-size: 45px;
+  font-weight: 700;
+}
+.ham-menu {
+
+  display: none;
+}
+.Header-btn > a {
+  text-decoration: none;
+  color: var(--White);
+  margin: 25px;
+
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Header-btn > a {
+    font-size: 16px;
+  }
+  .Header-logo-text {
+    font-size: 23px;
+  }
+  .Header-logo-icon {
+    width: 67px;
+    height: 73px;
+  }
+  .Header-contaner {
+    gap: 90px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .ham-menu {
+    
+    display: block;
+    margin-left: 170px;
+  }
+  .nav-contaner {
+    justify-content: space-between;
+  }
+
+  .nav-btn {
+    display: none;
+    flex-direction: column;
+
+    position: fixed;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    background: rgba(1, 1, 31, 0.571);
+    z-index: 10;
+    padding: 25px;
+    width: 220px;
+  }
+
+ 
+}
+
+@media only screen and (max-width: 576px) {
+  .nav-contaner {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+}
