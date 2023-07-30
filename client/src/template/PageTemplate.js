@@ -10,6 +10,7 @@ export default function PageTemplate() {
 
 			<main>
 				<Outlet />
+
 			</main>
 
 			<Footer></Footer>

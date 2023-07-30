@@ -1,5 +1,6 @@
 import React from "react";
 import SocialBox from "./SocialBox";
+
 export default function Footer() {
   return (
     <>

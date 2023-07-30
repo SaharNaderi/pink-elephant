@@ -6,6 +6,7 @@ export default function Header() {
       <div className="Header-contaner">
         <div className="Header-logo">
           <img
+
             className="Header-logo-icon"
             src="logo.svg"
             alt="logo"
@@ -18,8 +19,8 @@ export default function Header() {
           <a href="#h">News</a>
           <a href="#h">Users</a>
         </div>
-       
-        
+
+
       </div>
     </>
   );

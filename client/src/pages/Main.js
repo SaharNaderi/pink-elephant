@@ -8,9 +8,10 @@ import { GetAllUsers } from "../Utils/HealperFunction";
 export default function Main() {
   GetAllUsers();
   return (
+
     <>
       <dev className="contaner">
-        
+
 
         <div className="hero">
           <div className="hero-text">
@@ -24,7 +25,7 @@ export default function Main() {
           <img className="hero-img" src="hero-pic.svg" alt="" />
         </div>
 
-        
+
       </dev>
     </>
   );
