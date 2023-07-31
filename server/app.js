@@ -6,7 +6,7 @@ import {
 	clientRouter,
 	configuredHelmet,
 	configuredMorgan,
-	httpsOnly,
+	//httpsOnly,
 	logErrors,
 } from "./utils/middleware";
 
@@ -20,8 +20,8 @@ app.use(configuredMorgan());
 
 if (config.production) {
 	app.enable("trust proxy");
-	app.use(httpsOnly());
-}
+	//app.use(httpsOnly());
+ }
 
 app.use(apiRoot, apiRouter);
 app.use("/health", (_, res) => res.sendStatus(200));
