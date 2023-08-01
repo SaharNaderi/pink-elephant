@@ -1,13 +1,28 @@
-import { Route, Routes } from "react-router-dom";
 
-import About from "./pages/About";
-import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landing from "./Pages/Landing";
+import PageTemplate from "./template/PageTemplate";
+import RequiredInput from "./Components/RequiredInput";
+function App() {
+    return (
 
-const App = () => (
-	<Routes>
-		<Route path="/" element={<Home />} />
-		<Route path="/about/this/site" element={<About />} />
-	</Routes>
-);
+<Router>
+      <Routes>
+        <Route path="/*" element={<PageTemplate />}>
+          <Route path="home" element={<Landing></Landing>} />
+          <Route path="hireme" element={<RequiredInput></RequiredInput>} />
+          
+
+
+        </Route>
+      </Routes>
+    </Router>
+
+
+
+
+
+    );
+}
 
 export default App;

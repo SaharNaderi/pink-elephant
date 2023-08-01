@@ -1,0 +1,95 @@
+@import "./colors.css";
+.Header-contaner {
+  display: flex;
+  align-items: center;
+  gap: 190px;
+
+  
+  
+}
+.Header-logo {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-logo-icon {
+  width: 97px;
+  height: 103px;
+}
+.Header-logo-text {
+  font-size: 45px;
+  font-weight: 700;
+}
+.humbermenu {
+
+  display: none;
+}
+.humber-contaner{
+  display: flex;
+  align-items: center;
+width: 60px;justify-content: center;
+height: 60px;
+}
+.Header-btn > a {
+  text-decoration: none;
+  color: var(--White);
+  margin: 25px;
+
+  font-size: 30px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Header-btn > a {
+    font-size: 16px;
+  }
+  .Header-logo-text {
+    font-size: 23px;
+  }
+  .Header-logo-icon {
+    width: 67px;
+    height: 73px;
+  }
+  .Header-contaner {
+    gap: 90px;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .humbermenu {
+    z-index: 66;
+    display: block;
+    margin-left: 250px;
+  }
+  .Header-contaner {
+    justify-content: space-between;
+  }
+
+  .Header-btn {
+    display: none;
+    flex-direction: column;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(1, 1, 31, 0.571);
+    z-index: 10;
+    padding: 25px;
+    width: 220px;
+  }
+
+ 
+}
+
+@media only screen and (max-width: 576px) {
+  .Header-contaner {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+}
