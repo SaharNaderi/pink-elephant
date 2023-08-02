@@ -21,7 +21,7 @@ app.use(configuredMorgan());
 if (config.production) {
 	app.enable("trust proxy");
 	app.use(httpsOnly());
-}
+ }
 
 app.use(apiRoot, apiRouter);
 app.use("/health", (_, res) => res.sendStatus(200));
