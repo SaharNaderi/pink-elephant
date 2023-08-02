@@ -25,7 +25,7 @@ export default function Header() {
         <div className="Header-btn" style={{ display:isShowHumber }}>
         <Link to={"/home"}>Home</Link>
           <Link to={"/hireme"}>Hire Me</Link>
-          <Link to={"/guidens"}>Guidens</Link>
+          <Link to={"/guidance"}>Guidance</Link>
           <Link to={"/news"}>News</Link>
           <Link to={"/users"}>Users</Link>
         </div>
