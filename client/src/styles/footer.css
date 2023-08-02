@@ -1,0 +1,32 @@
+@import "./colors.css";
+
+.footer {
+    width: 100%;
+    background: var(--Black);
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer-left {
+    width: 40%;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-left {
+        margin: 25px 25px;
+        width: 90%;
+    }
+}

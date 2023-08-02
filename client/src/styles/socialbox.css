@@ -1,0 +1,13 @@
+@import "./colors.css";
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.social > p {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
