@@ -23,7 +23,7 @@ export default function Header() {
           <p className="Header-logo-text">WeLinked</p>
         </div>
         <div className="Header-btn" style={{ display:isShowHumber }}>
-        <Link to={"/home"}>Home</Link>
+        <Link to={"/"}>Home</Link>
           <Link to={"/hireme"}>Hire Me</Link>
           <Link to={"/guidance"}>Guidance</Link>
           <Link to={"/news"}>News</Link>
