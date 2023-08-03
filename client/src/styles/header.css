@@ -1,0 +1,98 @@
+.Header-container {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--White);
+  align-items: center;
+}
+
+.Header-btn {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+
+.Header-btn a {
+  color: var(--White);
+  text-decoration: none;
+}
+
+.humbermenu {
+  display: none;
+}
+
+.Header-logo {
+  color: var(--Chinese-Gold);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 45px;
+  gap: 20px;
+}
+
+.Header-logo img {
+  position: relative;
+  top: 10px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .Header-logo {
+      font-size: 30px;
+  }
+
+  .Header-logo img {
+      width: 80px;
+  }
+
+  .Header-btn {
+      font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Header-container {
+      width: 95vw;
+  }
+
+  .Header-btn {
+      display: none;
+  }
+
+  .humbermenu {
+      display: block;
+      height: 70%;
+      z-index: 10;
+  }
+
+  .Header-logo {
+      font-size: 20px;
+  }
+
+  .Header-logo img {
+      width: 53px;
+  }
+
+  .Header-btn {
+      position: absolute;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.65);
+      width: 50vw;
+      flex-direction: column;
+      top: 0;
+      right: 0;
+      z-index: 8;
+      justify-content: center;
+      gap: 20px;
+  }
+
+  .show{
+      display: flex;
+  }
+}
+
