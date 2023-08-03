@@ -15,7 +15,7 @@ export function GetAllUsers() {
 console.log(allUser);
 
 	useEffect(() => {
-		fetch("https://starter-kit-4v51.onrender.com/api/users")
+		fetch("/api/users")
 			.then((res) => {
 				if (!res.ok) {
 					throw new Error(res.statusText);
