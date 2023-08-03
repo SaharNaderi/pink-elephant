@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import logger from "./utils/logger";
-import { GET_USERS_PATH } from "./constants/pathConstants";
+import { GET_USERS_PATH, POST_USER_PATH } from "./constants/pathConstants";
 import db from "./db";
 
 const router = Router();
@@ -29,5 +29,50 @@ router.get(GET_USERS_PATH, async (req, res) => {
 	}
 });
 
+router.post(POST_USER_PATH, async (req, res) => {
+	try {
+		const {
+			first_name,
+			last_name,
+			age,
+			role,
+			nationality,
+			location,
+			soft_skills,
+			hard_skills,
+			mobile,
+			email,
+			linkedin,
+			youtube,
+			description,
+			hobbies,
+		} = req.body;
+
+		await db.query(
+			"INSERT INTO users (first_name, last_name, age, role, nationality, location, soft_skills, hard_skills, mobile, email, linkedin, youtube, description, hobbies) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)",
+			[
+				first_name,
+				last_name,
+				age,
+				role,
+				nationality,
+				location,
+				soft_skills,
+				hard_skills,
+				mobile,
+				email,
+				linkedin,
+				youtube,
+				description,
+				hobbies,
+			]
+		);
+
+		return res.status(201).json({ msg: "User data inserted successfully!" });
+	} catch (err) {
+		logger.error("Error inserting user data: %O", err);
+		return res.status(500).json({ msg: "Internal server error" });
+	}
+});
 
 export default router;
