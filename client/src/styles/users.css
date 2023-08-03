@@ -1,0 +1,12 @@
+body{
+    background-color: var(--Dark-Blue);
+}
+
+.userContainer{
+    display: flex;
+    
+    gap: 50px;
+flex-wrap: wrap;
+    justify-content: center;
+
+}
