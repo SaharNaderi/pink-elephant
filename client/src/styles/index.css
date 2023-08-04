@@ -1,5 +1,5 @@
 
-
+@import "./colors.css";
 *{
     border: 0;
     margin: 0;
@@ -11,7 +11,11 @@
 
 
 body{
-    
+    background-color: var(--Dark-Blue);
     font-family: 'Poppins', sans-serif;
 
+}
+
+.active{
+    color: var(--Gold) !important; 
 }
