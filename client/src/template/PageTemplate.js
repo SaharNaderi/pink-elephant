@@ -1,7 +1,8 @@
 import React from "react";
-import "./../Styles/pagetemplate.css";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import "./../styles/pagetemplate.css";
+
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 import { Outlet } from "react-router-dom";
 
