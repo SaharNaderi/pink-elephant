@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import logger from "./utils/logger";
-import { GET_USERS_PATH, POST_USER_PATH } from "./constants/pathConstants";
+import { USERS_PATH } from "./constants/pathConstants";
 import db from "./db";
 
 const router = Router();
@@ -11,7 +11,7 @@ router.get("/", (_, res) => {
 	res.json({ message: "Hello, world!" });
 });
 
-router.get(GET_USERS_PATH, async (req, res) => {
+router.get(USERS_PATH, async (req, res) => {
 	try {
 		const queryResult = await db.query("SELECT * FROM users");
 		const users = queryResult.rows;
@@ -29,7 +29,7 @@ router.get(GET_USERS_PATH, async (req, res) => {
 	}
 });
 
-router.post(POST_USER_PATH, async (req, res) => {
+router.post(USERS_PATH, async (req, res) => {
 	try {
 		const {
 			first_name,
