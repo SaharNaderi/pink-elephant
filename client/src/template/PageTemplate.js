@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/pagetemplate.css";
+
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
