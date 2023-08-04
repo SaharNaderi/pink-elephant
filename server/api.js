@@ -75,4 +75,26 @@ router.post(USERS_PATH, async (req, res) => {
 	}
 });
 
+router.get(`${USERS_PATH}/:userId`, async (req, res) => {
+	try {
+		const userId = req.params.userId;
+		const queryResult = await db.query(
+			"SELECT * FROM users WHERE user_id = $1",
+			[userId]
+		);
+		const user = queryResult.rows[0];
+
+		if (!user) {
+			return res
+				.status(404)
+				.json({ msg: "The user you are looking for, not found!" });
+		}
+
+		return res.status(200).json({ data: user });
+	} catch (err) {
+		logger.error("Error for fetching user: %O", err);
+		return res.status(500).json({ msg: "Internal server error" });
+	}
+});
+
 export default router;
