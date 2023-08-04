@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import "./../Styles/Landing.css";
+import "./../styles/Landing.css";
 import HeroPic from "../images/HeroPic";
 
 

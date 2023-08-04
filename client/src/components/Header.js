@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./../Styles/header.css";
+import "./../styles/header.css";
 import HumberMenu from "./HumberMenu";
 import { Link } from "react-router-dom";
 export default function Header() {
