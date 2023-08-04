@@ -11,8 +11,8 @@ const App = () => {
 		<Route path="/about/this/site" element={<About />} />
 
 		<Route path="/*" element={<PageTemplate />}>
-		<Route path="" element={<Landing></Landing>} />
-		<Route path="users" element={<Users></Users>} />
+		<Route path="" element={<Landing />} />
+		<Route path="users" element={<Users />} />
 
 
         </Route>
