@@ -8,19 +8,22 @@ import { allUserAtom } from "../Utils/helperFunctions";
 export default function Users() {
 
 
-    const [allUser, setAllUser] = useRecoilState(allUserAtom);
+    const [allUser] = useRecoilState(allUserAtom);
 
 if(allUser.length === 0){
     return <p>Loading...</p>;
 }
   return (
-    <div className="userContainer">
-
-{allUser.map((user)=>(<UserBox key={user.id} userID={user.id} firstName={user.firstName} lastName={user.lastName} Role={user.id}></UserBox>)
-
-)}
-
-
-    </div>
-  );
+		<div className="userContainer">
+			{allUser.map((user) => (
+				<UserBox
+					key={user.user_id}
+					userID={user.user_id}
+					firstName={user.first_name}
+					lastName={user.last_name}
+					Role={user.user_id}
+				></UserBox>
+			))}
+		</div>
+	);
 }

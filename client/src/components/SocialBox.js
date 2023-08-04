@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/socialbox.css";
+import "./../styles/socialbox.css";
 
 export default function SocialBox({ icon, text }) {
     return (
