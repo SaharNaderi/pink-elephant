@@ -22,7 +22,7 @@ if(allUser.length === 0){
 					userID={user.user_id}
 					firstName={user.first_name}
 					lastName={user.last_name}
-					Role={user.user_id}
+					Role={user.role}
 				></UserBox>
 			))}
 		</div>

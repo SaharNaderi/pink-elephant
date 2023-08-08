@@ -43,14 +43,16 @@
 .btnContainer{
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
+gap : 10% ;
 }
 .linkBtn{
-    text-decoration: none;
-    border-radius: 25px;
+text-decoration: none;
+border-radius: 25px;
+width: 30%;
 border: 1px solid #CE9B01;
 background: #EFC74E;
-    color: #000;
+color: #000;
 text-align: center;
 font-family: Poppins;
 font-size: 20px;
@@ -127,7 +129,9 @@ padding: 10px 23px;
     .hero-img {
         width: 465px;
     }
-
+.linkBtn{
+    width: 70%;
+}
     .hero-text {
         display: flex;
         flex-direction: column;
