@@ -23,7 +23,7 @@ console.log(allUser);
 				return res.json();
 			})
 			.then((body) => {
-				setAllUser(body.users);
+				setAllUser(body.data);
 
 			})
 			.catch((err) => {

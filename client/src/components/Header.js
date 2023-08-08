@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./../Styles/header.css";
+import "./../styles/header.css";
 import HumberMenu from "./HumberMenu";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Header() {
   const [isShowHumber, setIsShowHumber] = useState("");
   const [humberIsOpen, setHumberIsOpen] = useState(false);
@@ -23,11 +23,11 @@ export default function Header() {
           <p className="Header-logo-text">WeLinked</p>
         </div>
         <div className="Header-btn" style={{ display:isShowHumber }}>
-        <Link to={"/"}>Home</Link>
-          <Link to={"/hireme"}>Hire Me</Link>
-          <Link to={"/guidance"}>Guidance</Link>
-          <Link to={"/news"}>News</Link>
-          <Link to={"/users"}>Users</Link>
+          <NavLink to={"/"}>Home</NavLink>
+          <NavLink to={"/hireme"}>Hire Me</NavLink>
+          <NavLink to={"/guidance"}>Guidance</NavLink>
+          <NavLink to={"/news"}>News</NavLink>
+          <NavLink to={"/users"}>Users</NavLink>
         </div>
         <button className="humbermenu" onClick={humberhandler}>
           <HumberMenu isopen={humberIsOpen}></HumberMenu>

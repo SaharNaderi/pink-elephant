@@ -1,4 +1,4 @@
-@import "./colors.css";
+
 
 body {
     color: var(--White);
@@ -42,6 +42,26 @@ body {
 
     font-size: 40px;
     font-weight: 500;
+}
+
+.btnContainer{
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+.linkBtn{
+    text-decoration: none;
+    border-radius: 25px;
+border: 1px solid #CE9B01;
+background: #EFC74E;
+    color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 10px 23px;
 }
 
 @media only screen and (max-width: 1200px) {
