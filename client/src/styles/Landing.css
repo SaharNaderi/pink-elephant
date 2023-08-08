@@ -1,10 +1,6 @@
 
 
-body {
-    color: var(--White);
-    height: 100vh;
-    overflow: hidden;
-}
+
 
 .container {
     display: flex;
@@ -47,14 +43,16 @@ body {
 .btnContainer{
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
+gap : 10% ;
 }
 .linkBtn{
-    text-decoration: none;
-    border-radius: 25px;
+text-decoration: none;
+border-radius: 25px;
+width: 30%;
 border: 1px solid #CE9B01;
 background: #EFC74E;
-    color: #000;
+color: #000;
 text-align: center;
 font-family: Poppins;
 font-size: 20px;
@@ -63,10 +61,10 @@ font-weight: 400;
 line-height: normal;
 padding: 10px 23px;
 }
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1610px) {
     .hero-img {
-        width: 539px;
+        width:444px;
+        
     }
 
     .p1 {
@@ -83,13 +81,45 @@ padding: 10px 23px;
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1310px) {
+    .hero-img {
+        width:400px;
+
+    }
+
+    .p1 {
+        margin-top: 50px;
+        font-size: 24px;
+    }
+
+    .p2 {
+        font-size: 42px;
+    }
+
+    .p3 {
+        font-size: 16px;
+    }
+
+    .linkBtn{
+
+    font-size: 16px;
+    
+    padding: 5px 23px;
+    }
 }
+
+
 
 @media only screen and (max-width: 768px) {
     body {
         overflow: scroll;
+        overflow-x: hidden;
     }
+
+    .btnContainer{
+        gap: 12px;
+        flex-direction: column;
+        }
 
     .hero {
         flex-direction: column-reverse;
@@ -99,7 +129,9 @@ padding: 10px 23px;
     .hero-img {
         width: 465px;
     }
-
+.linkBtn{
+    width: 70%;
+}
     .hero-text {
         display: flex;
         flex-direction: column;
