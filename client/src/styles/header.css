@@ -24,6 +24,7 @@
 
 .humbermenu {
   display: none;
+  background-color: inherit;
 }
 
 .Header-logo {
@@ -41,21 +42,35 @@
   top: 10px;
 }
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1500px) {
   .Header-logo {
-      font-size: 30px;
+    font-size: 30px;
+}
+
+.Header-logo img {
+    width: 80px;
+}
+
+.Header-btn {
+    font-size: 20px;
+}
+}
+
+@media only screen and (max-width: 1310px) {
+  .Header-logo {
+      font-size: 24px;
   }
 
   .Header-logo img {
-      width: 80px;
+      width: 60px;
   }
 
   .Header-btn {
-      font-size: 20px;
+      font-size:16px;
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
   .Header-container {
       width: 95vw;
   }
@@ -95,4 +110,8 @@
       display: flex;
   }
 }
+
+
+
+
 

@@ -1,4 +1,8 @@
-
+body {
+    color: var(--White);
+    height: 100vh;
+    overflow: hidden;
+}
 .template-body{
  display: flex;
     flex-direction: column;

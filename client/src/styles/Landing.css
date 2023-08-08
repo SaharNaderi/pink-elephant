@@ -1,10 +1,6 @@
 
 
-body {
-    color: var(--White);
-    height: 100vh;
-    overflow: hidden;
-}
+
 
 .container {
     display: flex;
@@ -63,10 +59,10 @@ font-weight: 400;
 line-height: normal;
 padding: 10px 23px;
 }
-
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1610px) {
     .hero-img {
-        width: 539px;
+        width:444px;
+        
     }
 
     .p1 {
@@ -83,13 +79,45 @@ padding: 10px 23px;
     }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1310px) {
+    .hero-img {
+        width:400px;
+
+    }
+
+    .p1 {
+        margin-top: 50px;
+        font-size: 24px;
+    }
+
+    .p2 {
+        font-size: 42px;
+    }
+
+    .p3 {
+        font-size: 16px;
+    }
+
+    .linkBtn{
+
+    font-size: 16px;
+    
+    padding: 5px 23px;
+    }
 }
+
+
 
 @media only screen and (max-width: 768px) {
     body {
         overflow: scroll;
+        overflow-x: hidden;
     }
+
+    .btnContainer{
+        gap: 12px;
+        flex-direction: column;
+        }
 
     .hero {
         flex-direction: column-reverse;
