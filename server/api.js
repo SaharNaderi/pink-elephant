@@ -1,7 +1,7 @@
 import { Router } from "express";
 
 import logger from "./utils/logger";
-import { GET_USERS_PATH, POST_USER_PATH } from "./constants/pathConstants";
+import { USERS_PATH } from "./constants/pathConstants";
 import db from "./db";
 
 const router = Router();
@@ -11,7 +11,7 @@ router.get("/", (_, res) => {
 	res.json({ message: "Hello, world!" });
 });
 
-router.get(GET_USERS_PATH, async (req, res) => {
+router.get(USERS_PATH, async (req, res) => {
 	try {
 		const queryResult = await db.query("SELECT * FROM users");
 		const users = queryResult.rows;
@@ -29,7 +29,7 @@ router.get(GET_USERS_PATH, async (req, res) => {
 	}
 });
 
-router.post(POST_USER_PATH, async (req, res) => {
+router.post(USERS_PATH, async (req, res) => {
 	try {
 		const {
 			first_name,
@@ -71,6 +71,28 @@ router.post(POST_USER_PATH, async (req, res) => {
 		return res.status(201).json({ msg: "User data inserted successfully!" });
 	} catch (err) {
 		logger.error("Error inserting user data: %O", err);
+		return res.status(500).json({ msg: "Internal server error" });
+	}
+});
+
+router.get(`${USERS_PATH}/:userId`, async (req, res) => {
+	try {
+		const userId = req.params.userId;
+		const queryResult = await db.query(
+			"SELECT * FROM users WHERE user_id = $1",
+			[userId]
+		);
+		const user = queryResult.rows[0];
+
+		if (!user) {
+			return res
+				.status(404)
+				.json({ msg: "The user you are looking for, not found!" });
+		}
+
+		return res.status(200).json({ data: user });
+	} catch (err) {
+		logger.error("Error for fetching user: %O", err);
 		return res.status(500).json({ msg: "Internal server error" });
 	}
 });
