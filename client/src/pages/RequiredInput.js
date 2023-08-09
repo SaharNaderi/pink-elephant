@@ -1,6 +1,6 @@
 import "./../styles/requiredInput.css";
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
-
+import { useNavigate } from "react-router-dom";
 const userDetailsState = atom({
   key: "registerFormInputsState",
   default: {
@@ -8,7 +8,7 @@ const userDetailsState = atom({
     lastName: "",
     age:"",
     role: "",
-    nationallity:"",
+    nationality:"",
     location: "",
     softSkill: "",
     hardSkill: "",
@@ -57,6 +57,9 @@ const dataSelector = selector({
 export default function RequiredInput() {
   const [form, setForm] = useRecoilState(userDetailsState);
   const data = useRecoilValue(dataSelector);
+const navigate=useNavigate();
+
+
 
   const submitHandler=(event)=>{
     event.preventDefault();
@@ -72,7 +75,6 @@ export default function RequiredInput() {
       });
     }
 
-    console.log(data.allValid);
     if(data.allValid){
 
 
@@ -81,7 +83,7 @@ export default function RequiredInput() {
         last_name: form.lastName,
         age: form.age,
         role: form.role,
-        nationality: form.nationallity,
+        nationality: form.nationality,
         location: form.location,
         soft_skills: form.softSkill,
         hard_skills: form.hardSkill,
@@ -94,10 +96,13 @@ export default function RequiredInput() {
 
       };
 
-console.log("f");
+
+
       fetch("https://starter-kit-4v51.onrender.com/api/users", {
       method: "POST",
-
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(newUserInfos),
 
       })
@@ -105,6 +110,7 @@ console.log("f");
       .then((result) => {
 
         console.log(result);
+        navigate("/users");
       });
 
     }
@@ -281,14 +287,14 @@ console.log("f");
           className="input"
           type="text"
 
-          placeholder=" nationallity"
+          placeholder=" nationality"
           onChange={(e) =>
             setForm({
               ...form,
-              nationallity: e.target.value,
+              nationality: e.target.value,
             })
           }
-          value={form.nationallity}
+          value={form.nationality}
           />
 
 
@@ -396,12 +402,12 @@ console.log("f");
     </div>
 
 
-        <button className="submitBtn" type="submit"  >
+
+
+
+<button className="submitBtn" type="submit"  >
           submit
         </button></div>
-
-
-
 
 
 

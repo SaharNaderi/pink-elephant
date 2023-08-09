@@ -58,7 +58,7 @@
 
 .submitBtn{
     margin: 50px;
-    width: 100%;
+    width: 30vh;
     font-size: 16px;
 
  background-color: var(--Gold);
