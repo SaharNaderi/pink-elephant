@@ -36,7 +36,7 @@ const dataSelector = selector({
     const location = form.location.length;
     const age = form.age;
     const description =form.description.length;
-const allValid = form.allValid;
+    const allValid = form.allValid;
     const submit=form.submit;
 
 
