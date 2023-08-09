@@ -4,12 +4,15 @@ body{
 
 .userContainer{
     display: flex;
-    
+  
   
     gap: 180px;
     padding: 90px;
     flex-wrap: wrap;
     justify-content: center;
+
+    /**/
+    
 
 }
 

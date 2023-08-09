@@ -1,13 +1,13 @@
 body {
     color: var(--White);
     height: 100vh;
-    overflow: hidden;
 }
 .template-body{
+   
  display: flex;
     flex-direction: column;
     align-items: center;
-justify-content: space-between;
+justify-content: center;
 
 height: 100vh;
 

@@ -25,8 +25,7 @@ export default function Header() {
         <div className="Header-btn" style={{ display:isShowHumber }}>
           <NavLink to={"/"}>Home</NavLink>
           <NavLink to={"/hireme"}>Hire Me</NavLink>
-          <NavLink to={"/guidance"}>Guidance</NavLink>
-          <NavLink to={"/news"}>News</NavLink>
+
           <NavLink to={"/users"}>Users</NavLink>
         </div>
         <button className="humbermenu" onClick={humberhandler}>

@@ -15,6 +15,7 @@ if(allUser.length === 0){
     return <p>Loading...</p>;
 }
   return (
+
 		<div className="userContainer">
 			{allUser.map((user) => (
 				<UserBox
@@ -22,7 +23,7 @@ if(allUser.length === 0){
 					userID={user.user_id}
 					firstName={user.first_name}
 					lastName={user.last_name}
-					Role={user.role}
+					Role={user.user_id}
 				></UserBox>
 			))}
 		</div>

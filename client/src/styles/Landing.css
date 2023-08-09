@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
+    overflow: hidden;
     justify-content: space-between;
 }
 
@@ -44,15 +44,16 @@
 display: flex;
 align-items: center;
 justify-content: center;
-gap : 10% ;
+gap: 10%;
+margin-bottom: 20px;
 }
 .linkBtn{
-text-decoration: none;
-border-radius: 25px;
-width: 30%;
+    width: 30%;
+    text-decoration: none;
+    border-radius: 25px;
 border: 1px solid #CE9B01;
 background: #EFC74E;
-color: #000;
+    color: #000;
 text-align: center;
 font-family: Poppins;
 font-size: 20px;
@@ -129,14 +130,14 @@ padding: 10px 23px;
     .hero-img {
         width: 465px;
     }
-.linkBtn{
-    width: 70%;
-}
+
     .hero-text {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+    .linkBtn{
+        width: 70%;}
 }
 
 @media only screen and (max-width: 576px) {
