@@ -140,12 +140,6 @@ padding: 10px 23px;
         width: 70%;}
 }
 
-@media only screen and (max-width: 576px) {
-    .hero-img {
-        width: 359px;
-    }
-}
-
 .background_home{
     position: absolute;
     top: 0;
