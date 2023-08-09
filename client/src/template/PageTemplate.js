@@ -12,7 +12,7 @@ export default function PageTemplate() {
 
             <Header></Header>
 
-            <main>
+            <main className="mainclass">
                 <Outlet></Outlet>
             </main>
 

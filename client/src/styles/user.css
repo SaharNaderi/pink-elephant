@@ -1,0 +1,131 @@
+.userdetail{
+    display: flex;
+align-items: center;
+width: 100%;
+height:60vh;
+justify-content: center;
+gap: 185px;
+margin-top: 70px;
+
+}
+ .about{
+    color: #fff;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+.image{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+}
+.description{display:flex ;
+flex-direction: column;
+gap: 50px;
+background-color: rgba(255, 255, 255, 0.1);
+padding: 30px;
+height: 100%;
+width: 60%;
+
+}
+.descriptionleft{
+    display: flex;
+gap: 50%;
+width: 50%;
+}
+.descriptionright{
+
+    display: flex;
+    gap: 50%;
+    width: 50%;
+}
+
+
+@media only screen and (max-width: 1610px) {
+    .userdetail{
+   
+    gap: 125px;
+    margin-top: 60px;
+    }
+     .about{
+    
+        font-size: 24px;
+
+    }
+    .profile{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        
+    }
+    .image{
+        width: 150px;
+        height: 150px;
+        background-color: black;
+    }
+  
+    
+}
+
+
+
+
+@media only screen and (max-width: 1100px) {
+
+.userdetail{z-index: 1000;
+    margin-top: 70px;
+    overflow: scroll;
+    overflow-x: hidden;
+    flex-direction: column;
+    gap: 20px;
+  
+    
+    }
+     .about{
+     
+        font-size: 20px;
+       
+    }
+    .profile{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .image{
+        width: 250px;
+        height: 250px;
+        background-color: black;
+    }
+    .description{display:flex ;
+    
+    gap: 25px;
+   
+    height: 100%;
+    width: 90%;
+    
+    }
+    .descriptionleft{
+        display: flex;
+        flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    }
+    .descriptionright{
+    
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
