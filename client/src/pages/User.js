@@ -8,16 +8,16 @@ import "./../styles/user.css";
 
 export default function User() {
 
-const params =useParams();
+const params = useParams();
 const users = useRecoilState(allUserAtom);
 
-            const user=users.filter((user)=>{
-            user.user_id === params.userid;
+            const user = users.filter((user)=>{
+            user.user_id === params.user_id;
             });
 
   return (
     <>
-    <div className="userdetail">
+    <div className="userDetail">
         <div className="profile">
 
            <div className="image"></div>
@@ -30,14 +30,14 @@ const users = useRecoilState(allUserAtom);
 
         </div>
         <div className="description">
-            <div className="descriptionleft">
+            <div className="descriptionLeft">
                 <p className="about">SoftSkills: {user.soft_skills}</p>
                  <p className="about">HardSkills:
                  {user.hard_skills}</p>
 
 
             </div>
-            <div className="descriptionright">
+            <div className="descriptionRight">
 
                 <p className="about">Mobile: {user.mobile}</p>
                 <p className="about">Linkedin: {user.linkedin}</p>

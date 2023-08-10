@@ -35,9 +35,9 @@ const dataSelector = selector({
     const role = form.role.length;
     const location = form.location.length;
     const age = form.age;
-    const description =form.description.length;
+    const description = form.description.length;
     const allValid = form.allValid;
-    const submit=form.submit;
+    const submit= form.submit;
 
 
     return {
@@ -68,7 +68,7 @@ const navigate=useNavigate();
       ...form,
       submit: true,
     });
-    if(data.firstName !==0 && data.lastName !==0 && data.email!==0&& data.age!==0&& data.role!==0&& data.location !==0&& data.description !==0 ){
+    if(data.firstName !==0 && data.lastName !==0 && data.email !==0 && data.age !==0 && data.role !==0 && data.location !==0 && data.description !==0 ){
       setForm({
         ...form,
         allValid: true,

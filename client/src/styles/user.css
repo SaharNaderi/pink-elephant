@@ -1,4 +1,4 @@
-.userdetail{
+.userDetail{
     display: flex;
 align-items: center;
 width: 100%;
@@ -36,12 +36,12 @@ height: 100%;
 width: 60%;
 
 }
-.descriptionleft{
+.descriptionLeft{
     display: flex;
 gap: 50%;
 width: 50%;
 }
-.descriptionright{
+.descriptionRight{
 
     display: flex;
     gap: 50%;
@@ -50,7 +50,7 @@ width: 50%;
 
 
 @media only screen and (max-width: 1610px) {
-    .userdetail{
+    .userDetail{
    
     gap: 125px;
     margin-top: 60px;
@@ -80,7 +80,7 @@ width: 50%;
 
 @media only screen and (max-width: 1100px) {
 
-.userdetail{z-index: 1000;
+.userDetail{z-index: 1000;
     margin-top: 70px;
     overflow: scroll;
     overflow-x: hidden;
@@ -113,13 +113,13 @@ width: 50%;
     width: 90%;
     
     }
-    .descriptionleft{
+    .descriptionLeft{
         display: flex;
         flex-direction: column;
     gap: 25px;
     width: 100%;
     }
-    .descriptionright{
+    .descriptionRight{
     
         display: flex;
         flex-direction: column;
