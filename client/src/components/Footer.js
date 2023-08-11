@@ -6,8 +6,8 @@ export default function Footer() {
     return (
         <>
             <div className="footer">
-                <div className="footer-container">
-                    <p className="footer-left">
+                <div className="footerContainer">
+                    <p className="footerLeft">
                         Contact us today and we’ll help you get started. Most people start
                         with an About page that introduces them to potential site visitors.
                     </p>

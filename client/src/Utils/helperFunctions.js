@@ -12,10 +12,10 @@ export const allUserAtom = atom({
 
 export function GetAllUsers() {
 	const [allUser, setAllUser] = useRecoilState(allUserAtom);
-console.log(allUser);
+
 
 	useEffect(() => {
-		fetch("/api/users")
+		fetch("https://starter-kit-4v51.onrender.com/api/users")
 			.then((res) => {
 				if (!res.ok) {
 					throw new Error(res.statusText);
@@ -24,6 +24,7 @@ console.log(allUser);
 			})
 			.then((body) => {
 				setAllUser(body.data);
+
 
 			})
 			.catch((err) => {

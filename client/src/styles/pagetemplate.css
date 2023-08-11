@@ -1,17 +1,11 @@
 body {
-    color: var(--White);
-    height: 100vh;
+  color: var(--White);
+  height: 100vh;
+  overflow-x: hidden;
 }
 .template-body{
    
- display: flex;
-    flex-direction: column;
-    
-justify-content: start;
-
-
-
-}
-.mainclass{
-  margin-top: 10vh;  
+  display: flex;
+  flex-direction: column;   
+  justify-content: start;
 }

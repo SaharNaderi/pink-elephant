@@ -1,11 +1,11 @@
 .userDetail {
   display: flex;
   align-items: center;
-  width: 100%;
-  height: 60vh;
   justify-content: center;
   gap: 185px;
-  margin-top: 70px;
+  width: 100%;
+  margin: 20px 0;
+  
 }
 .about {
   color: #fff;
@@ -14,8 +14,9 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+ 
 }
-.profile {
+.profile { margin-top: 10px;
   display: flex;
   flex-direction: column;
   gap: 30px;

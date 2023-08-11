@@ -1,19 +1,42 @@
-import React from "react";
+
 import { useParams } from "react-router-dom";
-import { allUserAtom } from "../Utils/helperFunctions";
-import {  useRecoilState } from "recoil";
+import { useEffect } from "react";
 import "./../styles/user.css";
+import { atom,useRecoilState } from "recoil";
+
+export const userAtom = atom({
+	key: "userAtom",
+	default: [],
+  });
+
+
+
 
 
 
 export default function User() {
-
+const [user, setUser] = useRecoilState(userAtom);
 const params =useParams();
-const users = useRecoilState(allUserAtom);
 
-            const user=users.filter((user)=>{
-            user.user_id === params.userid;
-            });
+
+
+useEffect(() => {
+    fetch(`https://starter-kit-4v51.onrender.com/api/users/${params.userid}`)
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error(res.statusText);
+            }
+            return res.json();
+        })
+        .then((body) => {
+            setUser(body.data);
+
+
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+}, []);
 
   return (
     <>
