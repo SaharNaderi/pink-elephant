@@ -12,7 +12,7 @@ export default function Users() {
     const [allUser] = useRecoilState(allUserAtom);
 
 if(allUser.length === 0){
-    return <p>Loading...</p>;
+    return <p className="loding">Loading...</p>;
 }
   return (
 

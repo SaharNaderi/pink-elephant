@@ -1,5 +1,6 @@
 import "./../styles/requiredInput.css";
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
+import { GetAllUsers } from "../Utils/helperFunctions";
 import { useNavigate } from "react-router-dom";
 const userDetailsState = atom({
   key: "registerFormInputsState",
@@ -108,10 +109,12 @@ const navigate=useNavigate();
       })
       .then((res) => res.json())
       .then((result) => {
-
+        GetAllUsers();
         console.log(result);
         navigate("/users");
-      });
+      }).catch((err)=>{
+console.log(err);
+});
 
     }
 

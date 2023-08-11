@@ -1,19 +1,16 @@
-.Header-container {
-  margin-left: 200px;
-  position: fixed;
-    top: 0;
-  width: 70%;
+.HeaderContainer {
+ 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   color: var(--White);
   align-items: center;
   justify-content:center ;
-  gap: 200px;
+  gap: 400px;
 }
 
-.Header-btn {
-  width: 60%;
+.HeaderBtn {
+  
   display: flex;
   gap: 90px;
   font-size: 30px;
@@ -22,7 +19,7 @@
   align-items: center;
 }
 
-.Header-btn a {
+.HeaderBtn a {
   color: var(--White);
   text-decoration: none;
   
@@ -33,7 +30,7 @@
   background-color: inherit;
 }
 
-.Header-logo {
+.HeaderLogo {
   color: var(--Chinese-Gold);
   display: flex;
   justify-content: space-between;
@@ -43,57 +40,54 @@
   gap: 20px;
 }
 
-.Header-logo img {
+.HeaderLogo img {
   position: relative;
   top: 10px;
 }
 
 @media only screen and (max-width: 1500px) {
-  .Header-logo {
+  .HeaderLogo {
     font-size: 30px;
 }
 
-.Header-logo img {
+.HeaderLogo img {
     width: 80px;
 }
 
-.Header-btn {
+.HeaderBtn {
     font-size: 20px;
 }
 }
 
 @media only screen and (max-width: 1310px) {
-  .Header-logo {
+  .HeaderLogo {
       font-size: 24px;
   }
-  .Header-container {
-    width: 70%;
-    gap: 50px;
-
-margin:0 50px;
+  .HeaderContainer {
+   gap: 250px;
 }
 
 
-  .Header-logo img {
+  .HeaderLogo img {
       width: 60px;
   }
 
-  .Header-btn {
+  .HeaderBtn {
       font-size:16px;
       gap: 73px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .Header-container {
-      width: 70%;
+  .HeaderContainer {
+    margin: 20px;
       justify-content:space-between ;
-  
-  margin:0 100px;
+      gap: 200px;
+
   }
   
 
-  .Header-btn {
+  .HeaderBtn {
       display: none;
   }
 
@@ -103,15 +97,15 @@ margin:0 50px;
       z-index: 10;
   }
 
-  .Header-logo {
+  .HeaderLogo {
       font-size: 20px;
   }
 
-  .Header-logo img {
+  .HeaderLogo img {
       width: 53px;
   }
 
-  .Header-btn {
+  .HeaderBtn {
       position: absolute;
       height: 100vh;
       background: rgba(0, 0, 0, 0.65);

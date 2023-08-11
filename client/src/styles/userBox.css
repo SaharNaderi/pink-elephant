@@ -25,3 +25,11 @@ background-color: black;
 .userDetails{
     margin-top: 20px;
 }
+.clickMe{
+    background-color: var(--Navy-Blue);
+    color: var(--White);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+}

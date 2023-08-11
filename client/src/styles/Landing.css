@@ -5,15 +5,13 @@
 .container {
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
     justify-content: space-between;
 }
 
 .hero {
     height: fit-content;
-
-    margin: 25px 25px;
+justify-content: center;
+    margin: 25px;
     background: rgba(1, 1, 31, 0.571);
     display: flex;
     border-radius: 45px;
@@ -45,10 +43,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 10%;
-margin-bottom: 20px;
+
+margin: 20px;
 }
 .linkBtn{
-    width: 30%;
+    width: 34%;
     text-decoration: none;
     border-radius: 25px;
 border: 1px solid #CE9B01;
