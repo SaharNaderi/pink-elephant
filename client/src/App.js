@@ -18,11 +18,9 @@ export const allUserAtom = atom({
 
 const App = () => {
 	const [, setAllUsers] = useRecoilState(allUserAtom);
-
-	useEffect(() => {
-		setAllUsers(getAllUsers());
+useEffect( () => {
+		getAllUsers().then(setAllUsers).catch();
 	}, [setAllUsers]);
-
 	return (
 		<Routes>
 			<Route path="/*" element={<PageTemplate />}>
