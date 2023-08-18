@@ -2,7 +2,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 185px;
 	z-index: 1000;
 	flex-direction: column;
 	gap: 20px;
@@ -19,7 +18,8 @@
 	color: var(--Gold);
 }
 .userImg {
-	width: 300px;
+	width: 150px;
+	height: 150px;
 	padding: 20px;
 }
 .description {
@@ -28,6 +28,7 @@
 	padding: 40px;
 	flex-direction: column;
 	background-color: rgba(255, 255, 255, 0.2);
+	width: 60%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -40,9 +41,7 @@
 		gap: 70px;
 	}
 
-	.userImg {
-		width: 400px;
-	}
+	
 	.description {
 		gap: 70px;
 	}
@@ -57,10 +56,7 @@
 	.profile {
 		gap: 70px;
 	}
-	.userImg {
-		width: 500px;
-		height: 500px;
-	}
+	
 	.description {
 		gap: 70px;
 	}
@@ -77,7 +73,8 @@
 	}
 
 	.userImg {
-		width: 600px;
+		width: 250px;
+		height:250px;
 	}
 	.description {
 		gap: 70px;
