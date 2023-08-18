@@ -90,6 +90,7 @@ export default function RequiredInput() {
 				hobbies: form.hobbies,
 			};
 
+
 			const res = addNewUser(newUserInfos);
 			console.log(res);
 			if (res) {
