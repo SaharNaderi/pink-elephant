@@ -5,11 +5,11 @@ import userImg from "../images/user.svg";
 
 export default function User() {
 	const [user, setUser] = useState();
-	const params = useParams();
+	const params = useParams().userId;
 
 	useEffect(() => {
 		console.log("getUser");
-		fetch(`https://starter-kit-4v51.onrender.com/api/users/${params.userId}`)
+		fetch(`https://starter-kit-4v51.onrender.com/api/users/${params}`)
 			.then((res) => {
 				if (!res.ok) {
 					throw new Error(res.statusText);
@@ -22,7 +22,7 @@ export default function User() {
 			.catch((err) => {
 				console.error(err);
 			});
-	});
+	},[params]);
 
 	return (
 		<>
