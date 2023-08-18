@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import userImg from "../images/user.svg";
 
 export default function User() {
-	const [user, setUser] = useState();
+	const [user, setUser] = useState({});
 	const params = useParams().userId;
 
 	useEffect(() => {
