@@ -1,22 +1,21 @@
 import React from "react";
-import "./../styles/pagetemplate.css";
+import "./../styles/pageTemplate.css";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 import { Outlet } from "react-router-dom";
 
-export default function PageTemplate() {
-    return (
-        <article className="template-body">
+export default function pageTemplate() {
+	return (
+		<article className="template-body">
+			<Header></Header>
 
-            <Header></Header>
+			<main>
+				<Outlet></Outlet>
+			</main>
 
-            <main className="mainclass">
-                <Outlet></Outlet>
-            </main>
-
-            <Footer></Footer>
-        </article>
-    );
+			<Footer></Footer>
+		</article>
+	);
 }

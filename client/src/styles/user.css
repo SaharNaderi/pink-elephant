@@ -1,112 +1,85 @@
 .userDetail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 185px;
-  width: 100%;
-  margin: 20px 0;
-  
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 185px;
+	z-index: 1000;
+	flex-direction: column;
+	gap: 20px;
 }
-.about {
-  color: #fff;
-  font-family: Poppins;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
- 
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	align-items: center;
+	padding: 20px;
 }
-.profile { margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+.detail {
+	color: var(--Gold);
 }
-.image {
-  width: 150px;
-  height: 150px;
-  background-color: black;
+.userImg {
+	width: 300px;
+	padding: 20px;
 }
 .description {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  height: 100%;
-  width: 60%;
-}
-.descriptionLeft {
-  display: flex;
-  gap: 50%;
-  width: 50%;
-}
-.descriptionRight {
-  display: flex;
-  gap: 50%;
-  width: 50%;
+	display: flex;
+	gap: 40px;
+	padding: 40px;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media only screen and (max-width: 1610px) {
-  .userDetail {
-    gap: 125px;
-    margin-top: 60px;
-  }
-  .about {
-    font-size: 24px;
-  }
-  .profile {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  .image {
-    width: 150px;
-    height: 150px;
-    background-color: black;
-  }
+@media only screen and (min-width: 768px) {
+	.userDetail {
+		flex-direction: row;
+		margin: 30px 0;
+		align-items: end;
+	}
+	.profile {
+		gap: 70px;
+	}
+
+	.userImg {
+		width: 400px;
+	}
+	.description {
+		gap: 70px;
+	}
 }
 
-@media only screen and (max-width: 1100px) {
-  .userDetail {
-    z-index: 1000;
-    margin-top: 70px;
-    overflow: scroll;
-    overflow-x: hidden;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .about {
-    font-size: 20px;
-  }
-  .profile {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .image {
-    width: 250px;
-    height: 250px;
-    background-color: black;
-  }
-  .description {
-    display: flex;
+@media only screen and (min-width: 1300px) {
+	.userDetail {
+		flex-direction: row;
+		margin: 30px 0;
+		align-items: end;
+	}
+	.profile {
+		gap: 70px;
+	}
+	.userImg {
+		width: 500px;
+		height: 500px;
+	}
+	.description {
+		gap: 70px;
+	}
+}
 
-    gap: 25px;
+@media only screen and (min-width: 2000px) {
+	.userDetail {
+		flex-direction: row;
+		margin: 30px 0;
+		align-items: end;
+	}
+	.profile {
+		gap: 70px;
+	}
 
-    height: 100%;
-    width: 90%;
-  }
-  .descriptionLeft {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-  }
-  .descriptionRight {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    width: 100%;
-    flex-wrap: wrap;
-  }
+	.userImg {
+		width: 600px;
+	}
+	.description {
+		gap: 70px;
+	}
 }
