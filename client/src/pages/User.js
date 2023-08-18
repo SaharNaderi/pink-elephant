@@ -8,7 +8,6 @@ export default function User() {
 	const params = useParams().userId;
 
 	useEffect(() => {
-		console.log("getUser");
 		fetch(`https://starter-kit-4v51.onrender.com/api/users/${params}`)
 			.then((res) => {
 				if (!res.ok) {

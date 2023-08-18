@@ -5,8 +5,7 @@ export function getAllUsers() {
 				return res.json();
 			})
 			.then((body) => {
-				console.log(body.data);
-				resolve(body.users);
+				resolve(body.data);
 			})
 			.catch((err) => {
 				reject(err);
@@ -21,7 +20,6 @@ export async function addNewUser(newUserInfos) {
 	})
 		.then((res) => res.json())
 		.then((res) => {
-			console.log(res);
 			getAllUsers();
 			return true;
 		});

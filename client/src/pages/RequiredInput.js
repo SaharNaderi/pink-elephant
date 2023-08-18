@@ -91,7 +91,6 @@ export default function RequiredInput() {
 			};
 
 			const res = addNewUser(newUserInfos);
-			console.log(res);
 			if (res) {
 				navigate("/users");
 			} else {
