@@ -22,7 +22,7 @@ export default function User() {
 			.catch((err) => {
 				console.error(err);
 			});
-	},[params]);
+	}, [params]);
 
 	return (
 		<>

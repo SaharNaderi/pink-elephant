@@ -18,7 +18,7 @@ export const allUserAtom = atom({
 
 const App = () => {
 	const [, setAllUsers] = useRecoilState(allUserAtom);
-useEffect( () => {
+	useEffect(() => {
 		getAllUsers().then(setAllUsers).catch();
 	}, [setAllUsers]);
 	return (

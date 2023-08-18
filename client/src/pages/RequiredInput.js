@@ -2,7 +2,7 @@ import "../styles/requiredInput.css";
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
 import { addNewUser } from "../Utils/helperFunctions";
 import { useNavigate } from "react-router-dom";
-import { allUserAtom } from "../App";
+
 const userDetailsState = atom({
 	key: "registerFormInputsState",
 	default: {
@@ -53,7 +53,6 @@ const dataSelector = selector({
 });
 
 export default function RequiredInput() {
-	const [, setAllUsers] = useRecoilState(allUserAtom);
 	const [form, setForm] = useRecoilState(userDetailsState);
 	const data = useRecoilValue(dataSelector);
 	const navigate = useNavigate();
@@ -91,11 +90,9 @@ export default function RequiredInput() {
 				hobbies: form.hobbies,
 			};
 
-
 			const res = addNewUser(newUserInfos);
 			console.log(res);
 			if (res) {
-				setAllUsers(newUserInfos);
 				navigate("/users");
 			} else {
 				console.log("error");
