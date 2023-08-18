@@ -1,73 +1,73 @@
-
-import { useParams } from "react-router-dom";
-import { useEffect } from "react";
 import "./../styles/user.css";
-import { atom,useRecoilState } from "recoil";
-
-export const userAtom = atom({
-	key: "userAtom",
-	default: [],
-  });
-
-
-
-
-
-
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import userImg from "./../images/user.svg";
 export default function User() {
-const [user, setUser] = useRecoilState(userAtom);
-const params =useParams();
+	const [user, setUser] = useState();
+	const params = useParams();
 
+	useEffect(() => {
+		console.log("getUser");
+		fetch(`https://starter-kit-4v51.onrender.com/api/users/${params.userId}`)
+			.then((res) => {
+				if (!res.ok) {
+					throw new Error(res.statusText);
+				}
+				return res.json();
+			})
+			.then((body) => {
+				setUser(body.data);
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+	});
 
+	return (
+		<>
+			<div className="userDetail">
+				<div className="profile">
+					<img className="userImg" src={userImg} alt="" />
+					<p className="text">
+						<span className="detail"> First name:</span> {user.first_name}
+					</p>
+					<p className="text">
+						<span className="detail">Last name:</span> {user.last_name}
+					</p>
+					<p className="text">
+						<span className="detail">Age:</span> {user.age}
+					</p>
+					<p className="text">
+						<span className="detail"> Role:</span> {user.role}
+					</p>
+					<p className="text">
+						<span className="detail"> Location</span>: {user.location}
+					</p>
+					<p className="text">
+						<span className="detail">Email:</span>
+						{user.email}
+					</p>
+				</div>
+				<div className="description">
+					<p className="text">
+						<span className="detail">Mobile:</span> {user.mobile}
+					</p>
+					<p className="text">
+						<span className="detail"> Linkedin:</span> {user.linkedin}
+					</p>
 
-useEffect(() => {
-    fetch(`https://starter-kit-4v51.onrender.com/api/users/${params.userid}`)
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error(res.statusText);
-            }
-            return res.json();
-        })
-        .then((body) => {
-            setUser(body.data);
+					<p className="text">
+						<span className="detail"> SoftSkills:</span> {user.soft_skills}
+					</p>
+					<p className="text">
+						<span className="detail"> HardSkills:</span> {user.hard_skills}
+					</p>
 
-
-        })
-        .catch((err) => {
-            console.error(err);
-        });
-}, []);
-
-  return (
-    <>
-    <div className="userDetail">
-        <div className="profile">
-
-           <div className="image"></div>
-           <p className="about">First name: {user.first_name} </p>
-           <p className="about">Last name: {user.last_name}</p>
-           <p className="about">Age: {user.age}</p>
-           <p className="about">Role: {user.role}</p>
-           <p className="about">Location: {user.location}</p>
-           <p className="about">Email: {user.email}</p>
-
-        </div>
-        <div className="description">
-            <div className="descriptionLeft">
-                <p className="about">SoftSkills: {user.soft_skills}</p>
-                 <p className="about">HardSkills:
-                 {user.hard_skills}</p>
-
-
-            </div>
-            <div className="descriptionRight">
-
-                <p className="about">Mobile: {user.mobile}</p>
-                <p className="about">Linkedin: {user.linkedin}</p>
-            </div><p className="about">Description: {user.description}</p>
-        </div>
-    </div>
-
-    </>
-  );
+					<p className="text">
+						<span className="detail">Description:</span> {user.description}
+					</p>
+				</div>
+			</div>
+		</>
+	);
 }

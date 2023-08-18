@@ -1,36 +1,27 @@
-import { useEffect } from "react";
+export function getAllUsers() {
+	fetch("https://dummyjson.com/users")
+		.then((res) => {
+			res.json();
+		})
+		.then((body) => {
+			console.log(body);
+			return body;
+		})
+		.catch((err) => {
+			console.error(err);
+		});
+}
 
-import { atom, useRecoilState } from "recoil";
-
-
-export const allUserAtom = atom({
-	key: "allUserAtom",
-	default: [],
-  });
-
-
-
-export function GetAllUsers() {
-	const [allUser, setAllUser] = useRecoilState(allUserAtom);
-
-
-	useEffect(() => {
-		fetch("https://starter-kit-4v51.onrender.com/api/users")
-			.then((res) => {
-				if (!res.ok) {
-					throw new Error(res.statusText);
-				}
-				return res.json();
-			})
-			.then((body) => {
-				setAllUser(body.data);
-
-
-			})
-			.catch((err) => {
-				console.error(err);
-			});
-	}, []);
-
-
+export async function addNewUser(newUserInfos) {
+	await fetch("https://dummyjson.com/users/add", {
+		method: "POST",
+		headers: { "Content-Type": "application/json" },
+		body: JSON.stringify(newUserInfos),
+	})
+		.then((res) => res.json())
+		.then((res) => {
+			console.log(res);
+			getAllUsers();
+			return true;
+		});
 }

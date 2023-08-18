@@ -1,13 +1,12 @@
-
-
 .social {
-    display: flex;
-    align-items: center;
-    gap: 3px;
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 7px;
 }
 
-.social > p {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 30px;
+@media only screen and (min-width: 2000px) {
+	.social > img {
+		width: 50px;
+	}
 }

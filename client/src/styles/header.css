@@ -1,129 +1,111 @@
 .HeaderContainer {
- 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: var(--White);
-  align-items: center;
-  justify-content:center ;
-  gap: 400px;
-}
-
-.HeaderBtn {
-  
-  display: flex;
-  gap: 90px;
-  font-size: 30px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  align-items: center;
-}
-
-.HeaderBtn a {
-  color: var(--White);
-  text-decoration: none;
-  
-}
-
-.humbermenu {
-  display: none;
-  background-color: inherit;
+	margin: 20px 90px;
+	justify-content: space-between;
+	gap: 120px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: var(--White);
+	align-items: center;
 }
 
 .HeaderLogo {
-  color: var(--Chinese-Gold);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 700;
-  font-size: 45px;
-  gap: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
 }
 
-.HeaderLogo img {
-  position: relative;
-  top: 10px;
+.HeaderLogo > p {
+	font-weight: 700;
+	font-size: 1.25rem;
+	color: var(--Gold);
 }
 
-@media only screen and (max-width: 1500px) {
-  .HeaderLogo {
-    font-size: 30px;
-}
-
-.HeaderLogo img {
-    width: 80px;
+.HeaderLogo > img {
+	width: 73px;
 }
 
 .HeaderBtn {
-    font-size: 20px;
-}
-}
-
-@media only screen and (max-width: 1310px) {
-  .HeaderLogo {
-      font-size: 24px;
-  }
-  .HeaderContainer {
-   gap: 250px;
-}
-
-
-  .HeaderLogo img {
-      width: 60px;
-  }
-
-  .HeaderBtn {
-      font-size:16px;
-      gap: 73px;
-  }
+	display: none;
+	position: absolute;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.65);
+	width: 50%;
+	top: 0;
+	right: 0;
+	z-index: 8;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 1.25rem;
+	font-weight: 500;
+	font-family: "Poppins", sans-serif;
 }
 
-@media only screen and (max-width: 768px) {
-  .HeaderContainer {
-    margin: 20px;
-      justify-content:space-between ;
-      gap: 200px;
-
-  }
-  
-
-  .HeaderBtn {
-      display: none;
-  }
-
-  .humbermenu {
-      display: block;
-      height: 70%;
-      z-index: 10;
-  }
-
-  .HeaderLogo {
-      font-size: 20px;
-  }
-
-  .HeaderLogo img {
-      width: 53px;
-  }
-
-  .HeaderBtn {
-      position: absolute;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.65);
-      width: 50vw;
-      flex-direction: column;
-      top: 0;
-      right: 0;
-      z-index: 8;
-      justify-content: center;
-      gap: 20px;
-  }
-
-  .show{
-      display: flex;
-  }
+.show {
+	display: flex;
+}
+.HeaderBtn a {
+	color: var(--White);
+	text-decoration: none;
 }
 
+.humberMenu {
+	display: block;
+	height: 70%;
+	z-index: 10;
+	background-color: inherit;
+}
 
+@media only screen and (min-width: 768px) {
+	.HeaderContainer {
+		display: flex;
+		flex-direction: row;
+		color: var(--White);
+		align-items: center;
+		justify-content: space-between;
+		gap: 180px;
+	}
 
+	.HeaderBtn {
+		display: flex;
+		position: static;
+		height: fit-content;
+		background: inherit;
+		flex-direction: row;
+		font-size: 1.5rem;
+		justify-content: space-between;
+		gap: 30px;
+	}
+	.HeaderLogo > p {
+		font-size: 1.8rem;
+	}
 
+	.humberMenu {
+		display: none;
+	}
+}
 
+@media only screen and (min-width: 1300px) {
+	.HeaderBtn {
+		font-size: 2.8rem;
+	}
+	.HeaderLogo > p {
+		font-size: 3rem;
+	}
+
+	.HeaderLogo > img {
+		width: 93px;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.HeaderLogo img {
+		width: 130px;
+	}
+
+	.HeaderLogo > p {
+		font-size: 5rem;
+	}
+}

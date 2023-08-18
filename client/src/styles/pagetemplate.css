@@ -1,11 +1,10 @@
 body {
-  color: var(--White);
-  height: 100vh;
-  overflow-x: hidden;
+	color: var(--White);
+	height: 100vh;
+	overflow-x: hidden;
 }
-.template-body{
-   
-  display: flex;
-  flex-direction: column;   
-  justify-content: start;
+.template-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
 }

@@ -1,21 +1,56 @@
-
 @import "./colors.css";
-*{
-    border: 0;
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: border-box;
 }
 
-
-body{
-    background-color: var(--Dark-Blue);
-    font-family: 'Poppins', sans-serif;
-
+body {
+	background-color: var(--Dark-Blue);
+	font-family: "Poppins", sans-serif;
+	overflow-x: hidden;
 }
 
-.active{
-    color: var(--Gold) !important; 
+.active {
+	color: var(--Gold) !important;
+}
+.title {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+.text {
+	font-weight: 400;
+	font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.title {
+		font-size: 3.5rem;
+	}
+	.text {
+		line-height: 2rem;
+		font-size: 1.25rem;
+	}
+}
+
+@media only screen and (min-width: 1300px) {
+	.title {
+		font-size: 5rem;
+	}
+	.text {
+		line-height: 3rem;
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (min-width: 2000px) {
+	.title {
+		font-size: 6.25rem;
+	}
+	.text {
+		line-height: 4rem;
+		font-size: 3rem;
+	}
 }
