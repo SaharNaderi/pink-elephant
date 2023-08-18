@@ -11,7 +11,8 @@ export default function Footer() {
 			<div className="footer">
 				<div className="footerContainer">
 					<p className="footerText text">
-						Contact us today and we’ll help you get started. Most people start
+						Contact us 
+						today and we’ll help you get started. Most people start
 						with an About page that introduces them to potential site visitors.
 					</p>
 
