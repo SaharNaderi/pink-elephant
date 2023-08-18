@@ -1,6 +1,6 @@
 import React from "react";
-import "./../styles/userBox.css";
-import userImg from "./../images/user.svg";
+import "../styles/userBox.css";
+import userImg from "../images/user.svg";
 
 export default function UserBox({ firstName, lastName, userID, Role }) {
 	return (

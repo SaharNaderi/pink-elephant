@@ -1,8 +1,8 @@
 import React from "react";
 import UserBox from "../components/UserBox";
-import "./../styles/users.css";
+import "../styles/users.css";
 import { useRecoilState } from "recoil";
-import { allUserAtom } from "./../App";
+import { allUserAtom } from "../App";
 import { Link } from "react-router-dom";
 
 export default function Users() {

@@ -1,4 +1,4 @@
-import "./../styles/requiredInput.css";
+import "../styles/requiredInput.css";
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
 import { addNewUser } from "../Utils/helperFunctions";
 import { useNavigate } from "react-router-dom";

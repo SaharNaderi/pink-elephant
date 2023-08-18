@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./../styles/header.css";
+import "../styles/header.css";
 import HumberMenu from "./HumberMenu";
 import { NavLink } from "react-router-dom";
-import logo from "./../images/logo.svg";
+import logo from "../images/logo.svg";
 export default function Header() {
 	const [isShowHumber, setIsShowHumber] = useState("");
 	const [humberIsOpen, setHumberIsOpen] = useState(false);

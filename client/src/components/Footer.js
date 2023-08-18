@@ -1,10 +1,10 @@
 import React from "react";
 import SocialBox from "./SocialBox";
-import "./../styles/footer.css";
-import emailIcon from "./../images/emailIcon.svg";
-import mobileIcon from "./../images/mobileIcon.svg";
-import locationIcon from "./../images/locationIcon.svg";
-import copyRight from "./../images/copyRight.svg";
+import "../styles/footer.css";
+import emailIcon from "../images/emailIcon.svg";
+import mobileIcon from "../images/mobileIcon.svg";
+import locationIcon from "../images/locationIcon.svg";
+import copyRight from "../images/copyRight.svg";
 
 
 export default function Footer() {
