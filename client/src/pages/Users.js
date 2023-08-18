@@ -19,7 +19,7 @@ export default function Users() {
 						userID={user.user_id}
 						firstName={user.first_name}
 						lastName={user.last_name}
-						Role={user.user_id}
+						Role={user.role}
 					></UserBox>
 				</Link>
 			))}

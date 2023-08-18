@@ -1,3 +1,12 @@
+.social {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	padding: 7px;
+}
+
+
+
 .footer {
 	width: 100%;
 	background: var(--Black);
@@ -31,6 +40,9 @@
 }
 
 @media only screen and (min-width: 2000px) {
+	.social > img {
+		width: 50px;
+	}
 	.footerText {
 		max-width: 70%;
 	}
