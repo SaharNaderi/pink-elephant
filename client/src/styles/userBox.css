@@ -5,6 +5,7 @@
 	display: flex;
 	gap: 14px;
 	border-radius: 8px;
+	
 }
 .userDetails {
 	display: flex;
@@ -19,4 +20,5 @@
 	padding: 6px 10px;
 	border-radius: 8px;
 	cursor: pointer;
+	margin-top: 20px;
 }

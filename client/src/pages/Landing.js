@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import backGround from "./../images/heroBackGround.svg";
 import "../styles/Landing.css";
 import heroPic from "../images/heroPic.svg";
 
 export default function Landing() {
 	return (
 		<>
+		<img className="backgroundHome" src={backGround} alt="" />
 			<dev className="container">
 				<div className="hero">
 					<div className="hero-text">

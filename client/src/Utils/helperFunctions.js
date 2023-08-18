@@ -6,7 +6,7 @@ export function getAllUsers() {
 			})
 			.then((body) => {
 				console.log(body.data);
-				resolve(body.data);
+				resolve(body.users);
 			})
 			.catch((err) => {
 				reject(err);
