@@ -5,6 +5,8 @@ import emailIcon from "./../images/emailIcon.svg";
 import mobileIcon from "./../images/mobileIcon.svg";
 import locationIcon from "./../images/locationIcon.svg";
 import copyRight from "./../images/copyRight.svg";
+
+
 export default function Footer() {
 	return (
 		<>
