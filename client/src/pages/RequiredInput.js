@@ -68,8 +68,7 @@ export default function RequiredInput() {
 			data.firstName !== 0 &&
 			data.lastName !== 0 &&
 			data.email !== 0 &&
-			(data.age <100 ||
-			data.age >18 )&&
+			(data.age < 100 || data.age > 18) &&
 			data.role !== 0 &&
 			data.location !== 0 &&
 			data.description !== 0

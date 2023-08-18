@@ -7,10 +7,18 @@
 	box-sizing: border-box;
 }
 
+.template-body {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+}
+
 body {
 	background-color: var(--Dark-Blue);
 	font-family: "Poppins", sans-serif;
 	overflow-x: hidden;
+	color: var(--White);
+	height: 100vh;
 }
 
 .active {
