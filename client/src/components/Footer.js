@@ -1,9 +1,9 @@
 import React from "react";
 import SocialBox from "./SocialBox";
 import "./../styles/footer.css";
-import emailicon from "./../images/emailIcon.svg";
-import mobileicon from "./../images/mobileIcon.svg";
-import locationicon from "./../images/locatIonicon.svg";
+import emailIcon from "./../images/emailIcon.svg";
+import mobileIcon from "./../images/mobileIcon.svg";
+import locationIcon from "./../images/locationIcon.svg";
 import copyRight from "./../images/copyRight.svg";
 export default function Footer() {
 	return (
@@ -18,12 +18,12 @@ export default function Footer() {
 					<div>
 						<SocialBox
 							text={"welinked.uk@gmail.com"}
-							icon={emailicon}
+							icon={emailIcon}
 						></SocialBox>
-						<SocialBox text={"00447411507380"} icon={mobileicon}></SocialBox>
+						<SocialBox text={"00447411507380"} icon={mobileIcon}></SocialBox>
 						<SocialBox
 							text={"The Minster Building, Great Tower St, London EC3R 7AG"}
-							icon={locationicon}
+							icon={locationIcon}
 						></SocialBox>
 					</div>
 				</div>
