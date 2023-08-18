@@ -1,15 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import PageTemplate from "./template/PageTemplate";
-
 import Users from "./pages/Users";
 import Landing from "./pages/Landing";
 import User from "./pages/User";
 import RequiredInput from "./pages/RequiredInput";
-import { getAllUsers } from "./Utils/helperFunctions";
-
-import { useEffect } from "react";
-
-import { atom, useRecoilState } from "recoil";
+import { atom } from "recoil";
 
 export const allUserAtom = atom({
 	key: "allUserAtom",
@@ -17,10 +12,7 @@ export const allUserAtom = atom({
 });
 
 const App = () => {
-	const [, setAllUsers] = useRecoilState(allUserAtom);
-	useEffect(() => {
-		getAllUsers().then(setAllUsers).catch();
-	}, [setAllUsers]);
+
 	return (
 		<Routes>
 			<Route path="/*" element={<PageTemplate />}>
